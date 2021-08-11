@@ -29,7 +29,7 @@ export default function CardContainer({}: Props): ReactElement {
       <div className="row justify-content-around pt-5">
         {cardData.map(({ text, margin }) => {
           return (
-            <div className="card col-lg-4 col-md-12 box-shadow text-center p-2 cards__card">
+            <div className="card col-lg-4 col-md-12 box-shadow text-center p-4 cards__card">
               <img
                 className="card-img-top"
                 src="http://via.placeholder.com/400x300"

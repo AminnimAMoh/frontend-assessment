@@ -1,19 +1,14 @@
-import React from 'react'
+import React from "react";
+import RenderRouts from "./RenderRouts";
+import { Router } from "react-router-dom";
+import routes from './routes'
 
-import CoverContainer from './view/CaverContainer'
-import CardContainer from './view/CardContainer'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-import './custom.scss'
+import "./custom.scss";
 
 function App() {
-    return (
-        <div>
-            <CoverContainer/>
-            <CardContainer/>
-        </div>
-    )
+  return <div>{RenderRouts(routes)}</div>;
 }
 
-export default App
+export default App;
