@@ -37,6 +37,29 @@ $grid-breakpoints: (
   }
 }
 
+.cards {
+  font-size: 1em;
+  &__card{
+    border-radius: 12px !important;
+    width: 30% !important;
+  }
+  &__body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    &-pragraph {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    &-button {
+      background-color: transparent !important;
+      border: solid .16em black !important;
+      border-radius: 24px !important;
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .cover {
     font-size: 70%;
@@ -49,6 +72,11 @@ $grid-breakpoints: (
     &::after {
       width: 100%;
       padding-top: 7.5em;
+    }
+  }
+  .cards{
+    &__card{
+      width: 100% !important;
     }
   }
 }
