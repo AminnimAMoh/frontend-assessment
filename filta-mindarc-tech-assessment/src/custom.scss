@@ -1,0 +1,56 @@
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 400px,
+  md: 600px,
+  lg: 1000px,
+  xl: 1280px,
+);
+
+.cover {
+  font-size: 100%;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  &::before {
+    content: "Hello Technical!";
+    position: absolute;
+    font-size: 3.15em;
+    left: 50%;
+    top: 45%;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    line-height: 1.5em;
+    z-index: 1;
+  }
+  &::after {
+    content: "Loem ipsum dolor sit amet, consectetur adipiscing elit, sed do";
+    position: absolute;
+    font-size: 2em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 3.5em;
+  }
+  &__overlay-dark {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 1000px) {
+  .cover {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cover {
+    font-size: 50%;
+    &::after {
+      width: 100%;
+      padding-top: 7.5em;
+    }
+  }
+}
+
+@import "~bootstrap/scss/bootstrap.scss";
