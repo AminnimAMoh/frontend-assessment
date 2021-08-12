@@ -35,14 +35,14 @@ $grid-breakpoints: (
   &__overlay-dark {
     background-color: rgba(0, 0, 0, 0.2);
   }
-  &__image{
+  &__image {
     height: 100%;
   }
 }
 
 .cards {
   font-size: 1em;
-  &__card{
+  &__card {
     border-radius: 12px !important;
     width: 30% !important;
   }
@@ -55,7 +55,7 @@ $grid-breakpoints: (
     }
     &-button {
       background-color: transparent !important;
-      border: solid .14em black !important;
+      border: solid 0.14em black !important;
       border-radius: 24px !important;
       font-size: 1rem !important;
       font-weight: 700 !important;
@@ -63,16 +63,34 @@ $grid-breakpoints: (
     }
   }
 }
+.accordion {
+  &__collapse {
+    overflow-y: hidden;
+   &-open{
+    transition: opacity .1s ease-in, transform .25s ease-in;
+     opacity: 1;
+     transform: scale(1);
+     height: 100%;
+     display: inline-block;
+   }
+   &-close{
+    transition: opacity .1s ease-in, transform .2s ease-in;
+     opacity: 0;
+     height: 0;
+     transform: scale(0);
+   }
+  }
+}
 
 @media (max-width: 1000px) {
   .cover {
     font-size: 70%;
   }
-  .cards{
+  .cards {
     font-size: 80%;
-    &__body{
-      &-button{
-        font-size: .7rem !important;
+    &__body {
+      &-button {
+        font-size: 0.7rem !important;
       }
     }
   }
@@ -86,16 +104,16 @@ $grid-breakpoints: (
       padding-top: 7.5em;
     }
   }
-  .cards{
+  .cards {
     font-size: 60%;
     padding: 0% 15% !important;
-    &__card{
+    &__card {
       width: auto !important;
       margin-top: 50px !important;
     }
-    &__body{
-      &-button{
-        font-size: .5rem !important;
+    &__body {
+      &-button {
+        font-size: 0.5rem !important;
       }
     }
   }
