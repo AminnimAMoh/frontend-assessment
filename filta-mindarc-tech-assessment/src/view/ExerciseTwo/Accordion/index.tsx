@@ -2,27 +2,30 @@ import React, { MouseEventHandler, ReactElement, createRef } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//Type initialization for arguments deconstruction.
 interface Data {
   title: string;
   content: string;
 }
+
+// Type initialization for arguments.
 interface Props {
   data: Data[];
 }
 
 function ExTwo({data}: Props): ReactElement {
+  //Referencing to the accordions parent.
   const accordionObjects = createRef<HTMLDivElement>();
-  const headingColorList = [
-    "bg-info text-white",
-    "bg-warning text-dark",
-    "bg-danger text-white",
-    "bg-success text-white",
-  ];
+
+  //Function to handle click on the accordion button.
   const handleClick = (e: any): any => {
+    //Making an array of all child elements in the accordion parent.
     const accordions = accordionObjects.current?.children;
     const targetElementName = e.target.id;
 
+    //cheking for null | undefined
     if (accordions) {
+      //looping through the array to close all accordions and open the selected one.
       for (let i = 0; i < accordions.length; i++) {
         const accordianIdName =
           accordions[i].children[0].firstChild?.firstChild?.firstChild
@@ -30,6 +33,7 @@ function ExTwo({data}: Props): ReactElement {
 
         const grabCollapseElement = accordions[i].children[0].children[1];
 
+        //Using add/remove class to set each accordion state.
         if (
           grabCollapseElement.classList.contains("accordion__collapse-open")
         ) {
@@ -82,6 +86,7 @@ function ExTwo({data}: Props): ReactElement {
                     </h5>
                   </div>
                   <div
+                  //Seting the first accordion active using the index.
                     className={`card-collapse ${
                       index === 0
                         ? "accordion__collapse-open"

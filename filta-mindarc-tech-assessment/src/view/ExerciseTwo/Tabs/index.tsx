@@ -1,9 +1,12 @@
 import React, { ReactElement, useState } from "react";
 
+//Type initialization for arguments deconstruction.
 interface Data {
   title: string;
   content: string;
 }
+
+// Type initialization for arguments.
 interface Props {
   data: Data[];
 }
@@ -17,7 +20,7 @@ function Tabs({ data }: Props): ReactElement {
       setActiveIndex(index)  
     } 
   return (
-    <div className="container h-100">
+    <div className="container h-100 d-sm-none d-md-block">
       <ul className="nav nav-pills nav-fill">
         {data.map(({ content, title }, index) => {
           return (
@@ -29,7 +32,7 @@ function Tabs({ data }: Props): ReactElement {
           );
         })}
       </ul>
-      <div className="container d-flex align-items-center justify-content-center just h-100">
+      <div className="container d-flex align-items-center justify-content-center just h-100 w-50">
             <div dangerouslySetInnerHTML={{ __html: visibleContent }}/>
       </div>
     </div>
