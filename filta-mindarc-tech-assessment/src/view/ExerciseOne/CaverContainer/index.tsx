@@ -2,9 +2,7 @@ import React, { ReactElement } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-interface Props {}
-
-function CoverContainer({}: Props): ReactElement {
+function CoverContainer(): ReactElement {
   return (
     <div className="container-fluid cover" style={{ padding: 0 }}>
       <div className="row">

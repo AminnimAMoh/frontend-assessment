@@ -1,12 +1,9 @@
 import React, { ReactElement } from "react";
-import {Link} from 'react-router-dom'
 
 import CoverContainer from '../ExerciseOne/CaverContainer'
 import CardContainer from '../ExerciseOne/CardContainer'
 
-interface Props {}
-
-function ExOne({}: Props): ReactElement {
+function ExOne(): ReactElement {
   return (
     <div style={{overflowX: 'hidden'}}>
       <CoverContainer />

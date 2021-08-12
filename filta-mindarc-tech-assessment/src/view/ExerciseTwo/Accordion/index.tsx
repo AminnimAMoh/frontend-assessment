@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement, createRef, useState } from "react";
+import React, { ReactElement, createRef, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,7 +16,7 @@ interface Props {
 function ExTwo({ data }: Props): ReactElement {
   //Referencing to the accordions parent.
   const accordionObjects = createRef<HTMLDivElement>();
-  
+
   //A visited state variable to reserve the open accordion.
   const [openAccordian, setOpenAccordian]=useState<string>('Section 1')
 

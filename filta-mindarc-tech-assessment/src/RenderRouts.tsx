@@ -9,10 +9,7 @@ import routes from './routes'
 import React, { ReactElement } from "react";
 import { IRoute } from "./types";
 
-interface Props {
-}
-
-function RenderRouts({}: Props): ReactElement {
+function RenderRouts(): ReactElement {
   return (
     <BrowserRouter>
       <Switch>

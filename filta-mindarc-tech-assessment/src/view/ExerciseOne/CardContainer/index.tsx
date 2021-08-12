@@ -2,14 +2,12 @@ import React, { ReactElement } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-interface Props {}
-
 interface Data {
   text: string;
   margin: number;
 }
 
-export default function CardContainer({}: Props): ReactElement {
+export default function CardContainer(): ReactElement {
   const cardData: Data[] = [
     {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",

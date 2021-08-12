@@ -25,7 +25,7 @@ function Tabs({ data }: Props): ReactElement {
         {data.map(({ content, title }, index) => {
           return (
             <li className="nav-item">
-              <a className={`nav-link ${index===activeIndex ? 'active' : ''}`} href="#" onClick={e=>handleTabClick(content, index)}>
+              <a className={`nav-link ${index===activeIndex ? 'active' : ''}`} onClick={e=>handleTabClick(content, index)}>
                 {title}
               </a>
             </li>

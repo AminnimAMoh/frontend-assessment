@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-interface Props {}
-
-function Back({}: Props): ReactElement {
+function Back(): ReactElement {
   return (
     <div>
       <div className="btn btn-link bg-dark text-white fixed-bottom">

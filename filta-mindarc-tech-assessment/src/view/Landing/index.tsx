@@ -1,9 +1,7 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-interface Props {}
-
-function Landing({}: Props): ReactElement {
+function Landing(): ReactElement {
   return (
     <div className="container text-center d-flex flex-column justify-content-around align-items-center h-100 pt-5 pb-5 pl-5 pr-5 w-50">
       <div className="row">

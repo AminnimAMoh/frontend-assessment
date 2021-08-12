@@ -4,11 +4,7 @@ import Tabs from './Tabs'
 
 import data from "../../data/data.json";
 
-interface Props {
-    
-}
-
-function ExTwo({}: Props): ReactElement {
+function ExTwo(): ReactElement {
     return (
         <div className='h-100'>
             <Accordian data={data}/>

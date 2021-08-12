@@ -1,4 +1,3 @@
-import React, { lazy } from "react";
 import {IRoute} from './types'
 
 import LandingPage from './view/Landing'
@@ -16,13 +15,13 @@ const routes: IRoute[]=[
     path: "/ExOne",
     name: 'Exersize One',
     exact: true,
-    component: () => [<ExOne />, ,<Home/>]
+    component: () => [<ExOne />, <Home/>]
   },
   {
     path: "/ExTwo",
     name: 'Exersize Two',
     exact: true,
-    component: () => [<ExTwo />,,<Home/>]
+    component: () => [<ExTwo />,<Home/>]
   },
 ];
 
