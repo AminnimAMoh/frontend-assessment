@@ -11,7 +11,6 @@ function ExOne({}: Props): ReactElement {
     <div style={{overflowX: 'hidden'}}>
       <CoverContainer />
       <CardContainer />
-      <Link to='/' style={{textDecoration: 'none'}}>Back</Link>
     </div>
   );
 }

@@ -4,25 +4,25 @@ import {IRoute} from './types'
 import LandingPage from './view/Landing'
 import ExOne from './view/ExerciseOne'
 import ExTwo from './view/ExerciseTwo'
-
+import Home from './view/Home'
 const routes: IRoute[]=[
   {
     path: "/",
     name: 'Landing',
     exact: true,
-    component: () => <LandingPage />,
+    component: () => <LandingPage />
   },
   {
     path: "/ExOne",
     name: 'Exersize One',
     exact: true,
-    component: () => <ExOne />,
+    component: () => [<ExOne />, ,<Home/>]
   },
   {
     path: "/ExTwo",
     name: 'Exersize Two',
     exact: true,
-    component: () => <ExTwo />,
+    component: () => [<ExTwo />,,<Home/>]
   },
 ];
 

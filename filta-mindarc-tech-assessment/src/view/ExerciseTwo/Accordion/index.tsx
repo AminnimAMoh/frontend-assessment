@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement, createRef } from "react";
+import React, { MouseEventHandler, ReactElement, createRef, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -13,9 +13,12 @@ interface Props {
   data: Data[];
 }
 
-function ExTwo({data}: Props): ReactElement {
+function ExTwo({ data }: Props): ReactElement {
   //Referencing to the accordions parent.
   const accordionObjects = createRef<HTMLDivElement>();
+  
+  //A visited state variable to reserve the open accordion.
+  const [openAccordian, setOpenAccordian]=useState<string>('Section 1')
 
   //Function to handle click on the accordion button.
   const handleClick = (e: any): any => {
@@ -40,21 +43,13 @@ function ExTwo({data}: Props): ReactElement {
           grabCollapseElement.classList.remove("accordion__collapse-open");
           grabCollapseElement.classList.add("accordion__collapse-close");
         }
-        if (accordianIdName === targetElementName) {
-          console.log(grabCollapseElement);
-          if (
-            grabCollapseElement.classList.contains("accordion__collapse-open")
-          ) {
-            console.log("hello");
-            grabCollapseElement.classList.remove("accordion__collapse-open");
-            grabCollapseElement.classList.add("accordion__collapse-close");
-          } else if (
-            grabCollapseElement.classList.contains("accordion__collapse-close")
-          ) {
-            console.log("hello");
-            grabCollapseElement.classList.add("accordion__collapse-open");
-            grabCollapseElement.classList.remove("accordion__collapse-close");
-          }
+
+        //Just keep the selected one open by chacking id with the target.
+        if (accordianIdName === targetElementName && openAccordian!==targetElementName) {
+          //A visited state variable to reserve the open accordion.
+          setOpenAccordian(targetElementName)
+          grabCollapseElement.classList.add("accordion__collapse-open");
+          grabCollapseElement.classList.remove("accordion__collapse-close");
         }
       }
     }
@@ -86,7 +81,7 @@ function ExTwo({data}: Props): ReactElement {
                     </h5>
                   </div>
                   <div
-                  //Seting the first accordion active using the index.
+                    //Seting the first accordion active using the index.
                     className={`card-collapse ${
                       index === 0
                         ? "accordion__collapse-open"
